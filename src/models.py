@@ -8,6 +8,7 @@ from eralchemy import render_er
 
 Base = declarative_base()
 
+# Web user data
 class User(Base):
     __tablename__ = "user"
     id = Column(Integer, primary_key=True)
@@ -17,6 +18,7 @@ class User(Base):
     password = Column(String(15), nullable=False)
     active = Column(Integer, default=0)
 
+# Existing data types (Planet, Vehicle, Character...)
 class DataType(Base):
     __tablename__ = "data_type"
     id = Column(Integer, primary_key=True)
@@ -36,7 +38,7 @@ class Vehicle_Brand(Base):
 class Vehicle(Base):
     __tablename__ = "vehicle"
     id = Column(Integer, primary_key=True)
-    model = Column(String(100), nullable=False)
+    name = Column(String(100), nullable=False)
     price = Column(Float)
     brand_id = Column(Integer, ForeignKey("vehicle_brand.id"))
     brand = relationship(Vehicle_Brand)
@@ -51,6 +53,7 @@ class Character(Base):
     planet = relationship(Planet)
     vehicle = relationship(Vehicle)
 
+# List of all user favourites
 class Favourite(Base):
     __tablename__ = "favourite"
     user_id = Column(Integer, ForeignKey("user.id"), primary_key=True)

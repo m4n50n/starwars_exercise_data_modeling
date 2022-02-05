@@ -1,5 +1,7 @@
 # ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) Star Wars exercise data modeling with Python
 
+![screenshot](https://raw.githubusercontent.com/m4n50n/starwars_exercise_data_modeling/main/screenshot_preview.png)
+
 ✏ *Building the Entity Relationship Diagram for the Star Wars exercise. Inspired in **./preview.png***.
 
 ## Instructions 📄
