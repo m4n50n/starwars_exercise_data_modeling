@@ -1,6 +1,6 @@
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, Date, Float, String
+from sqlalchemy import Column, ForeignKey, Integer, Boolean, DateTime, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -16,7 +16,8 @@ class User(Base):
     lastname = Column(String(100), nullable=False)
     email = Column(String(70), nullable=False)
     password = Column(String(15), nullable=False)
-    active = Column(Integer, default=0)
+    is_active = Column(Boolean)
+    created_date = Column(DateTime)
 
 # Existing data types (Planet, Vehicle, Character...)
 class DataType(Base):
@@ -29,16 +30,19 @@ class Planet(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
     temperature = Column(Float)
+    image_url = Column(String(250))
 
 class Vehicle_Brand(Base):
     __tablename__ = "vehicle_brand"
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
+    image_url = Column(String(250))
 
 class Vehicle(Base):
     __tablename__ = "vehicle"
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
+    image_url = Column(String(250))
     price = Column(Float)
     brand_id = Column(Integer, ForeignKey("vehicle_brand.id"))
     brand = relationship(Vehicle_Brand)
@@ -47,7 +51,9 @@ class Character(Base):
     __tablename__ = "character"
     id = Column(Integer, primary_key=True)
     name = Column(String(100), nullable=False)
-    birthday = Column(Date, nullable=False)
+    description = (String(200))
+    image_url = Column(String(250))
+    birthday = Column(DateTime, nullable=False)
     planet_id = Column(Integer, ForeignKey("planet.id"))
     vehicle_id = Column(Integer, ForeignKey("vehicle.id"))
     planet = relationship(Planet)
@@ -59,6 +65,7 @@ class Favourite(Base):
     user_id = Column(Integer, ForeignKey("user.id"), primary_key=True)
     data_type_id = Column(Integer, ForeignKey("data_type.id"), primary_key=True)
     data_id = Column(Integer, primary_key=True)
+    created_date = Column(DateTime)
     
 ## Draw from SQLAlchemy base
 render_er(Base, "diagram.png")
