@@ -22,6 +22,8 @@
 
 <https://github.com/breatheco-de/exercise-starwars-data-modeling>
 
+<https://docs.sqlalchemy.org/en/14/core/type_basics.html>
+
 <https://www.youtube.com/watch?v=UI6lqHOVHic>
 
 <https://app.quickdatabasediagrams.com/>
