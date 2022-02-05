@@ -15,6 +15,7 @@
 * Install all dependencies with `$ pipenv install`
 * Generate the diagram as many times as you need: `$ python src/models.py`
 * Open the file `diagram.png` to check out the UML diagram.
+* If you receive a *pipenv* error, install it running the following command: `$ pip install pipenv`
 
 ## Sources 📌
 
