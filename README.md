@@ -1,43 +1,27 @@
-# StarWars blog database
+# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) Star Wars exercise data modeling with Python
 
-**Important**: To do this activity you need to `fork` this repo into your **Github** account and then open the forked repo on Gitpod.
+✏ *Building the Entity Relationship Diagram for the Star Wars exercise. Inspired in **./preview.png***.
 
-Inside the `src/models.py` file you will find a couple of classes describing an example database.
+## Instructions 📄
 
-Here is a 4min video explaining what UML is: [https://www.youtube.com/watch?v=UI6lqHOVHic](https://www.youtube.com/watch?v=UI6lqHOVHic)
+* All classes are described in `src/models.py`
 
-We are going to be creating the Entity Relationship Diagram for your StarWars Blog Database, a very similar diagram to this one:
+## Preview 🎬
 
-![Starwars Diagram](https://github.com/breatheco-de/exercise-starwars-data-modeling/blob/master/assets/example.png?raw=true)
-[Click to open diagram](https://app.quickdatabasediagrams.com/#/d/LxNXQZ)
+* You can open this repository in **Gitpod**.
+* Get inside the environment running `pipenv shell`
+* Install all dependencies with `pipenv install`
+* Generate the diagram as many times as you need: `python src/models.py`
+* Open the file `diagram.png` to check out the UML diagram.
 
-> 🔥 You can use this FREE tool to practice your diagram for the first time: https://app.quickdatabasediagrams.com/#/d/
+## Sources 📌
 
-## 💻 Installation
+<https://learn.breatheco.de/course/full-stack.v4/22/p/data-modeling-starwars>
 
-1. Get inside the environment `$ pipenv shell`
+<https://github.com/breatheco-de/exercise-starwars-data-modeling>
 
-2. Install all dependencies `$ pipenv install`
+<https://www.youtube.com/watch?v=UI6lqHOVHic>
 
-3. Generate de diagram as many times as you need `$ python src/models.py`
+<https://app.quickdatabasediagrams.com/>
 
-4. Open the file `diagram.png` to check out your UML diagram!
-
-
-## 📝Instructions
-
-Your Job is to update the `src/models.py` file with the code needed to replicate the StarWars data model.
-
-The project is using the SQLAlchemy Python library to generate the database.
-
-- Your project must have a table `User` that will represent your blog users.
-- Your blog users will be able to login and save their favorite planets and characters.
-- The database should store the user favorites.
-- The database should store characters and planets.
-- What other tables do you think a blog like this might have?
-- What properties should go inside the user? or inside the Character or Favorite table?
-- What are the relationships between those tables?
-- Please add at least 4 models with all of its properties.
-- Generate the `diagram.png` file at the end by running `$ python3 models.py` on the console.
-
-
+💻 _Jose Clemente García Rodríguez_ (<https://github.com/m4n50n>)
