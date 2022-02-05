@@ -11,9 +11,9 @@
 ## Preview 🎬
 
 * You can open this repository in **Gitpod**.
-* Get inside the environment running `pipenv shell`
-* Install all dependencies with `pipenv install`
-* Generate the diagram as many times as you need: `python src/models.py`
+* Get inside the environment running `$ pipenv shell`
+* Install all dependencies with `$ pipenv install`
+* Generate the diagram as many times as you need: `$ python src/models.py`
 * Open the file `diagram.png` to check out the UML diagram.
 
 ## Sources 📌
